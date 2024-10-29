@@ -1,9 +1,6 @@
-import { useQuiz } from "../contexts/QuizContext";
-
-function Options({ question }) {
-  const { dispatch, answer } = useQuiz();
-
-  const hasAnswered = answer !== null;
+function Options({ question, dispatch, answer }) {
+  const hasAnswered = answer !== null; // The answer is "null" in the initial state , So if the user clicks on any option then
+  // the answer will not be null and so we are disabling the button
 
   return (
     <div className="options">
